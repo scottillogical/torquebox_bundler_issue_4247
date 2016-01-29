@@ -5,11 +5,11 @@ This project shows an issue when using:
 
 Instructions to duplicate:
 - Install torquebox 2.3.2 http://torquebox.org/getting-started/2.3.2/
-- View the server
-- See log error
+- Run the server 
+-  Visit localhost:8080 to see log error
 
 
-
+```
   javax.servlet.ServletException: org.jruby.exceptions.RaiseException: (LoadError) no such file to load -- action_controller/dispatcher
 	  org.torquebox.web.servlet.RackFilter.doRack(RackFilter.java:117)
 	  org.torquebox.web.servlet.RackFilter.doFilter(RackFilter.java:101)
@@ -18,3 +18,4 @@ Instructions to duplicate:
 	  org.torquebox.web.servlet.SendfileFilter.doFilter(SendfileFilter.java:33)
 
 
+```
