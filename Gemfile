@@ -1,39 +1,40 @@
-source 'https://rubygems.org'
-
+source 'http://rubygems.org'
 gem 'rails', '3.2.22.1'
-
-# Bundle edge Rails instead:
-# gem 'rails', :git => 'git://github.com/rails/rails.git'
+gem 'dalli', '2.2.1'
 
 gem 'activerecord-jdbcsqlite3-adapter'
+gem 'squeel', '= 1.0'
+gem 'geokit', '= 1.6'
+gem 'ignorable'
+gem 'httparty', '= 0.12.0'
+gem 'text'
+gem 'twitter_cldr'
+gem 'request_store'
+gem 'virtus'
+gem 'cashier', '= 0.4.1'
+gem 'paraphrase', '= 0.6.1'
+gem 'jbuilder', '= 1.4.2'
+gem 'i18n', '0.6.11'
+gem 'rails-i18n', '= 0.7.3'
+gem 'torquebox-cache', '2.3.2'
 
-gem 'jruby-openssl'
-
-# Gems used only for assets and not required
-# in production environments by default.
-group :assets do
-  gem 'sass-rails',   '~> 3.2.3'
-  gem 'coffee-rails', '~> 3.2.1'
-
-  # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-  gem 'therubyrhino'
-
-  gem 'uglifier', '>= 1.0.3'
+group :production, :staging do
+  gem 'newrelic_rpm', '= 3.6.4.122'
 end
 
-gem 'jquery-rails'
+group :development, :test do
+  gem 'rspec_junit_formatter'
+  gem 'spork', :git => 'https://github.com/sporkrb/spork.git'
+  gem 'rspec-rails', '= 2.13.2'
+  gem 'factory_girl_rails', '= 3.5'
+  gem 'simplecov', '= 0.7.1'
+  gem 'simplecov-rcov', '= 0.2.3'
+  gem 'capistrano', '2.15.5'
+  gem 'pry-rails', '= 0.3.1'
+end
 
-# To use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
-
-# To use Jbuilder templates for JSON
-# gem 'jbuilder'
-
-# Use unicorn as the app server
-# gem 'unicorn'
-
-# Deploy with Capistrano
-# gem 'capistrano'
-
-# To use debugger
-# gem 'debugger'
+group :development do
+  gem 'torquebox-capistrano-support', '=2.3.2'
+  gem 'torquebox-rake-support', '=2.3.2'
+  gem 'torquebox', '~> 2.3.2'
+end
