@@ -21,3 +21,6 @@ Instructions to duplicate:
 ```
 
 To fix the issue, unpin rails in the Gemfile and bundle.  The app should now load successfully.
+
+
+Confirmed this is a torquebox issue
